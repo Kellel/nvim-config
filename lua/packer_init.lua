@@ -19,6 +19,9 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
 
+	-- extra snips
+	use "rafamadriz/friendly-snippets"
+
 	-- Git stuff
 	use "tpope/vim-fugitive"
 

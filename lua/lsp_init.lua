@@ -39,11 +39,22 @@ local lsp_flags = {
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local root_dir = require('lspconfig/util').root_pattern('go.work', 'go.mod', '.git')
 
 require('lspconfig')['gopls'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,
+	root_dir = root_dir,
+	filetypes = {"go", "gomod"},
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
 }
 
 require('lspconfig')['rust_analyzer'].setup{
