@@ -46,6 +46,12 @@ require('lspconfig')['gopls'].setup{
 	capabilities = capabilities,
 }
 
+require('lspconfig')['rust_analyzer'].setup{
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+}
+
 require('lspconfig')['salt_ls'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
