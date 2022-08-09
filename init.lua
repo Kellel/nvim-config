@@ -10,6 +10,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 vim.o.background = "dark"
+vim.o.termguicolors = true
 vim.cmd([[colorscheme solarized8_flat]])
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]])
 
