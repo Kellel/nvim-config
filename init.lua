@@ -15,9 +15,11 @@ vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]])
 
 vim.cmd([[set clipboard+=unnamedplus]])
 
+vim.opt.laststatus = 3
+
 vim.g.gui_font_default_size = 12
 vim.g.gui_font_size = vim.g.gui_font_default_size
-vim.g.gui_font_face = "GoMono Nerd Font Mono"
+vim.g.gui_font_face = "GoMono Nerd Font"
 
 RefreshGuiFont = function()
   vim.opt.guifont = string.format("%s:h%s",vim.g.gui_font_face, vim.g.gui_font_size)
