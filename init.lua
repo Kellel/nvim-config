@@ -18,6 +18,10 @@ vim.cmd([[set clipboard+=unnamedplus]])
 
 vim.opt.laststatus = 3
 
+-- Enable crosshairs
+vim.opt.cursorcolumn = true
+vim.opt.cursorline = true
+
 vim.g.gui_font_default_size = 12
 vim.g.gui_font_size = vim.g.gui_font_default_size
 vim.g.gui_font_face = "GoMono Nerd Font"
